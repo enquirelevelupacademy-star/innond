@@ -1,0 +1,1611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;PhD Centralised Portal | Global Doctoral Institute&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tailwind.config = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>theme: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>extend: {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>colors: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>brand: '#EA580C',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>'brand-dark': '#C2410C',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>'slate-panel': '#1F242D',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>'slate-surface': '#2A303C'</p>
+<p class="p1"><span class="Apple-converted-space">          </span>},</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fontFamily: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>sans: ['Inter', 'sans-serif']</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Google Fonts &amp; Font Awesome Icons --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: 'Inter', sans-serif; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.scratch-underline {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.scratch-underline::after {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>bottom: -6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M5 12 Q 75 4, 150 11 T 295 8 Q 200 18, 10 14' stroke='%23EA580C' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Custom scrollbar for control panel tables */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar-track {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f1f1f1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 9999px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar-thumb:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #94a3b8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-[#F3F4F6] text-gray-800 antialiased min-h-screen flex flex-col selection:bg-orange-500 selection:text-white"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Institute Brand Logo --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" onclick="showSection('home')" class="flex items-center gap-3 group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500 via-orange-600 to-amber-700 text-white font-black text-xl flex items-center justify-center shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>P</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="font-bold text-lg text-gray-900 block leading-tight"&gt;PhD Centralised Portal&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-gray-500 font-medium"&gt;Unified PhD &amp; DBA Application Desk&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Desktop Navigation Bar --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav class="hidden md:flex items-center gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="showSection('home')" id="nav-btn-home" class="px-3 py-2 text-sm font-semibold text-orange-600 transition-colors"&gt;Home&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="scrollToPrograms()" class="px-3.5 py-1.5 text-sm font-semibold text-orange-800 bg-orange-100 hover:bg-orange-200 rounded-lg transition-colors"&gt;Programs&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="openApplyModal()" class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-colors"&gt;Apply Now&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="showSection('tracker')" id="nav-btn-tracker" class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-colors"&gt;Track Application&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="openAdminModal()" class="flex items-center gap-2 px-3.5 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900 border border-gray-300 rounded-xl hover:border-gray-400 bg-gray-50 hover:bg-white transition-all shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-shield-halved text-xs text-orange-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span id="nav-admin-label"&gt;Admin Portal&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Mobile Hamburger Toggle --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-600 hover:text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Toggle Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;i class="fa-solid fa-bars text-xl"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Mobile Dropdown Navigation --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="showSection('home'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-gray-800 font-semibold hover:bg-gray-50 rounded-lg"&gt;Home&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="scrollToPrograms(); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-orange-700 font-semibold bg-orange-50 rounded-lg"&gt;Doctoral Programs&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="openApplyModal(); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-gray-800 font-semibold hover:bg-gray-50 rounded-lg"&gt;Apply Now&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="showSection('tracker'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-gray-800 font-semibold hover:bg-gray-50 rounded-lg"&gt;Track Application&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="openAdminModal(); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-orange-600 font-semibold bg-gray-100 rounded-lg"&gt;Admin Control Center&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main class="flex-grow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="sec-home" class="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Hero Banner --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="bg-[#262B34] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden border border-gray-700/60"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute -right-20 -top-20 w-96 h-96 bg-orange-500/15 rounded-full blur-3xl pointer-events-none"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute right-10 bottom-0 opacity-10 text-9xl font-black text-white pointer-events-none select-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>PHD</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="relative z-10 max-w-3xl space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-wrap items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30 text-xs font-semibold tracking-wide uppercase"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-globe text-[11px]"&gt;&lt;/i&gt; Admissions Open 2026-2027</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-600/90 via-orange-600/80 to-amber-700/90 text-amber-100 font-semibold text-xs sm:text-sm tracking-wide shadow-md shadow-orange-950/40 border border-amber-500/40 animate-pulse ring-2 ring-orange-500/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="relative flex h-2 w-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-75"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="relative inline-flex rounded-full h-2 w-2 bg-amber-400"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-graduation-cap text-amber-200"&gt;&lt;/i&gt; Up to 70% Alumni Scholarship</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Advance Your Academic &amp; &lt;br class="hidden sm:inline" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="scratch-underline text-white"&gt;Professional Legacy&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Explore world-class research doctorates and executive doctorates of business administration designed for visionary leaders and academic scholars.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-wrap gap-4 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="openApplyModal()" class="px-6 py-3.5 bg-orange-600 hover:bg-orange-500 text-white font-bold rounded-xl shadow-lg shadow-orange-600/30 flex items-center gap-2 transition-all hover:scale-[1.02] active:scale-95"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;Start Application&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-arrow-right text-xs"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="showSection('tracker')" class="px-6 py-3.5 bg-gray-700/80 hover:bg-gray-700 text-gray-200 font-semibold rounded-xl border border-gray-600/70 transition-all hover:text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-magnifying-glass me-2 text-xs text-orange-400"&gt;&lt;/i&gt;Track Existing Status</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl font-extrabold text-gray-900 tracking-tight"&gt;4-Step Selection Procedure&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-500 text-sm mt-1"&gt;Transparent and rigorous evaluation process for doctoral candidate admission.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="mt-2 sm:mt-0 text-xs font-semibold px-3 py-1 bg-gray-100 text-gray-700 rounded-full w-max"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Rolling Admissions</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="relative p-6 bg-gray-50/80 rounded-2xl border border-gray-200/70 space-y-3 hover:border-orange-200 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 font-black flex items-center justify-center text-base shadow-xs"&gt;1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="font-bold text-gray-900 text-base"&gt;Online Application&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-600 leading-relaxed"&gt;Submit proposal, credentials, and personal research trajectory online through the unified form.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="relative p-6 bg-gray-50/80 rounded-2xl border border-gray-200/70 space-y-3 hover:border-orange-200 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 font-black flex items-center justify-center text-base shadow-xs"&gt;2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="font-bold text-gray-900 text-base"&gt;Shortlisting&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-600 leading-relaxed"&gt;Faculty committee evaluates academic background, research viability, and supervisor alignment.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="relative p-6 bg-gray-50/80 rounded-2xl border border-gray-200/70 space-y-3 hover:border-orange-200 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 font-black flex items-center justify-center text-base shadow-xs"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="font-bold text-gray-900 text-base"&gt;Interview with Experts&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-600 leading-relaxed"&gt;Interactive online interview with senior research committee members and doctoral deans.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="relative p-6 bg-gray-50/80 rounded-2xl border border-gray-200/70 space-y-3 hover:border-emerald-200 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-black flex items-center justify-center text-base shadow-xs"&gt;4&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="font-bold text-gray-900 text-base"&gt;Final Selection&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-600 leading-relaxed"&gt;Formal offer letter issued with reference allocation, scholarship tier, and primary guide assigned.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="study-modes-section" class="bg-[#1A1D23] text-white rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8 border border-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight"&gt;Choose your study mode&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-400 text-sm mt-1"&gt;Select from flexible learning structures tailored to your lifestyle and academic goals.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs text-orange-400 bg-orange-950/60 border border-orange-800/60 px-3.5 py-1.5 rounded-full font-semibold w-max flex items-center gap-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-shapes text-orange-500"&gt;&lt;/i&gt; 8 Pathways Available</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-gray-700/60 hover:border-orange-500/50 transition-all flex flex-col justify-between space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;Full-time, on-campus PhD&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;Suits applicants who can commit to regular on-campus laboratory and seminar research.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-orange-400 font-semibold bg-orange-950/40 px-2.5 py-1 rounded-md w-max border border-orange-900/40"&gt;On-Campus Immersion&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-gray-700/60 hover:border-orange-500/50 transition-all flex flex-col justify-between space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;Part-time PhD&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;Suits applicants balancing research with employment commitments. Eligibility set per department.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-gray-300 font-semibold bg-gray-800/80 px-2.5 py-1 rounded-md w-max border border-gray-700"&gt;Flexible Timeline&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-gray-700/60 hover:border-orange-500/50 transition-all flex flex-col justify-between space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;Working-professional options&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;Tailored weekend colloquiums and evening mentoring where permitted by sponsoring employers.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-gray-300 font-semibold bg-gray-800/80 px-2.5 py-1 rounded-md w-max border border-gray-700"&gt;Executive Support&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-gray-700/60 hover:border-orange-500/50 transition-all flex flex-col justify-between space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;Hybrid study&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;Blended online research coursework with periodic physical residencies for doctoral symposia.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-gray-300 font-semibold bg-gray-800/80 px-2.5 py-1 rounded-md w-max border border-gray-700"&gt;Blended Seminars&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-gray-700/60 hover:border-orange-500/50 transition-all flex flex-col justify-between space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;DBA or executive doctorate&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;A professional doctorate for experienced organizational practitioners targeting strategic innovation.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-orange-400 font-semibold bg-orange-950/40 px-2.5 py-1 rounded-md w-max border border-orange-900/40"&gt;Applied Leadership&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-gray-700/60 hover:border-orange-500/50 transition-all flex flex-col justify-between space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;Online or distance options&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;Only where legally permitted for the institution and qualification. Verification provided prior to admission.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-gray-300 font-semibold bg-gray-800/80 px-2.5 py-1 rounded-md w-max border border-gray-700"&gt;Remote Delivery&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-orange-500/50 hover:border-orange-500 transition-all flex flex-col justify-between space-y-4 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute -top-1 -right-1 bg-orange-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-bl shadow-xs"&gt;NEW&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;Executive Doctoral Fellowship&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;Fully funded research track for senior executives with monthly stipend and direct dean mentorship.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-orange-400 font-semibold bg-orange-950/40 px-2.5 py-1 rounded-md w-max border border-orange-900/40"&gt;Full Sponsorship + Stipend&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-[#262B34] p-5 rounded-2xl border border-orange-500/50 hover:border-orange-500 transition-all flex flex-col justify-between space-y-4 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute -top-1 -right-1 bg-orange-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-bl shadow-xs"&gt;NEW&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="font-bold text-base text-white mb-1.5"&gt;Industrial PhD Track&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-gray-400 text-xs leading-relaxed"&gt;Joint industry-academia research with corporate sponsorship and specialized laboratory access.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-[11px] text-orange-400 font-semibold bg-orange-950/40 px-2.5 py-1 rounded-md w-max border border-orange-900/40"&gt;Corporate Partnership&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-[#232730] border-l-4 border-orange-500 p-4 rounded-r-xl text-xs text-gray-300 leading-relaxed flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-circle-info text-orange-500 text-lg"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Online or distance delivery is presented strictly where regulations and the accredited institution permit it. Submission of an online form does not guarantee remote eligibility.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="programs-directory" class="space-y-6 pt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col md:flex-row gap-4 justify-between items-center bg-white p-4 sm:p-5 rounded-2xl border border-gray-200/80 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="relative w-full md:w-96"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-gray-400 text-sm"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="prog-search" oninput="filterPrograms()" placeholder="Search by program title, discipline, keyword..." class="w-full pl-11 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex items-center gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="setProgramFilter('all')" id="filter-all" class="prog-filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-orange-600 text-white whitespace-nowrap shadow-xs transition-all"&gt;All Programs&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="setProgramFilter('phd')" id="filter-phd" class="prog-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-all"&gt;Ph.D. Degrees&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="setProgramFilter('dba')" id="filter-dba" class="prog-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition-all"&gt;Executive DBA&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="program-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Dynamically populated via renderPrograms() --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="sec-tracker" class="hidden py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="bg-white p-8 sm:p-10 rounded-3xl border border-gray-200/80 shadow-sm space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md border border-orange-200"&gt;Real-Time Verification&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2"&gt;Track Application Status&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-gray-500 text-sm mt-1"&gt;Enter your unique Reference ID generated during submission (e.g., GDI-8X92K4).&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col sm:flex-row gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="text" id="track-id-input" placeholder="e.g. GDI-8X92K4" class="flex-1 px-4 py-3.5 border border-gray-300 rounded-xl uppercase font-mono text-base tracking-wider focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button onclick="trackApplication()" class="px-8 py-3.5 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-xl transition-all shadow-md shadow-orange-600/20 active:scale-95 flex items-center justify-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-radar text-sm"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Track Application&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Sample IDs Helper for easy user testing --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-center gap-2 pt-1 text-xs text-gray-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="font-medium"&gt;Quick Test Sample IDs:&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" onclick="quickTrack('GDI-8X92K4')" class="px-2 py-0.5 bg-gray-100 hover:bg-orange-50 hover:text-orange-700 rounded border border-gray-200 font-mono transition-colors"&gt;GDI-8X92K4&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" onclick="quickTrack('GDI-3M19A7')" class="px-2 py-0.5 bg-gray-100 hover:bg-orange-50 hover:text-orange-700 rounded border border-gray-200 font-mono transition-colors"&gt;GDI-3M19A7&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="track-result" class="hidden pt-6 border-t border-gray-100 space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Populated by trackApplication() --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="sec-admin-panel" class="hidden py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Admin Bar Header --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="bg-[#1F242D] text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-700/80 flex flex-col md:flex-row md:items-center justify-between gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex items-center gap-2 mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-bold tracking-wider uppercase text-emerald-400"&gt;Authenticated Admin Session&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2 class="text-2xl sm:text-3xl font-extrabold text-white"&gt;Admissions Central Control Center&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-gray-400 text-xs sm:text-sm mt-1"&gt;Review candidates, manage admission states, evaluate research briefs, and export cohorts.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button onclick="exportApplicationsToCSV()" class="px-4 py-2.5 bg-gray-700/70 hover:bg-gray-700 text-gray-200 text-xs font-semibold rounded-xl border border-gray-600 transition-all flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-file-csv text-emerald-400"&gt;&lt;/i&gt; Export CSV</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button onclick="handleAdminLogout()" class="px-4 py-2.5 bg-red-600/90 hover:bg-red-600 text-white text-xs font-bold rounded-xl transition-all flex items-center gap-2 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-right-from-bracket"&gt;&lt;/i&gt; Sign Out</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Admin Stat KPI Cards --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs font-bold uppercase text-gray-400"&gt;Total Applicants&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="p-2 bg-orange-50 text-orange-600 rounded-lg text-xs"&gt;&lt;i class="fa-solid fa-users"&gt;&lt;/i&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 id="stat-total-apps" class="text-2xl sm:text-3xl font-black text-gray-900 mt-2"&gt;0&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="text-[11px] text-emerald-600 font-semibold flex items-center gap-1 mt-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-arrow-trend-up"&gt;&lt;/i&gt; Live Synchronized</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs font-bold uppercase text-gray-400"&gt;Under Review&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="p-2 bg-amber-50 text-amber-600 rounded-lg text-xs"&gt;&lt;i class="fa-solid fa-hourglass-half"&gt;&lt;/i&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 id="stat-pending-apps" class="text-2xl sm:text-3xl font-black text-amber-600 mt-2"&gt;0&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="text-[11px] text-gray-500 font-medium mt-1 block"&gt;Awaiting Shortlist&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs font-bold uppercase text-gray-400"&gt;Interview Stage&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg text-xs"&gt;&lt;i class="fa-solid fa-user-tie"&gt;&lt;/i&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 id="stat-interview-apps" class="text-2xl sm:text-3xl font-black text-indigo-600 mt-2"&gt;0&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="text-[11px] text-gray-500 font-medium mt-1 block"&gt;Faculty Panel Assigned&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs font-bold uppercase text-gray-400"&gt;Offer Granted&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="p-2 bg-emerald-50 text-emerald-600 rounded-lg text-xs"&gt;&lt;i class="fa-solid fa-award"&gt;&lt;/i&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 id="stat-accepted-apps" class="text-2xl sm:text-3xl font-black text-emerald-600 mt-2"&gt;0&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="text-[11px] text-emerald-600 font-medium mt-1 block"&gt;Final Selection Complete&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Admin Applications Registry Table --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="bg-white rounded-3xl border border-gray-200/80 shadow-sm overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="p-6 border-b border-gray-100 flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 bg-gray-50/50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-lg font-bold text-gray-900"&gt;Registered Candidate Pipeline&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-500"&gt;Real-time status updates immediately reflect on candidate tracker pages.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-wrap items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-400 text-xs"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="text" id="admin-search" oninput="renderAdminDashboard()" placeholder="Search candidate / ID..." class="pl-8 pr-3 py-1.5 bg-white border border-gray-200 rounded-lg text-xs focus:ring-2 focus:ring-orange-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="admin-status-filter" onchange="renderAdminDashboard()" class="text-xs border border-gray-200 rounded-lg px-3 py-1.5 bg-white font-medium focus:ring-2 focus:ring-orange-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="ALL"&gt;All Statuses&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Application Submitted"&gt;Application Submitted&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Under Review"&gt;Under Review&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Interview Shortlisted"&gt;Interview Shortlisted&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Offer Issued"&gt;Offer Issued&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Rejected"&gt;Rejected&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="overflow-x-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;table class="w-full text-left text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;thead class="bg-gray-50 text-gray-600 font-bold uppercase tracking-wider border-b border-gray-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th class="px-6 py-3.5"&gt;Ref ID&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th class="px-6 py-3.5"&gt;Applicant Details&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th class="px-6 py-3.5"&gt;Program Track&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th class="px-6 py-3.5"&gt;Submission Date&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th class="px-6 py-3.5"&gt;Current Status&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th class="px-6 py-3.5 text-center"&gt;Action &amp; Dossier&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tbody id="admin-table-body" class="divide-y divide-gray-100 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Rendered dynamically by renderAdminDashboard() --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="admin-table-empty" class="hidden p-8 text-center text-gray-500 space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-inbox text-3xl text-gray-300"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-xs"&gt;No candidate applications found matching query.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="bg-[#EA580C] text-white py-16 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-4xl mx-auto space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Take the Next Step in Your Research Journey.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-orange-100 text-base sm:text-lg max-w-2xl mx-auto font-normal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Find a suitable doctoral program and connect with the admissions team for research proposal guidance.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex flex-wrap justify-center gap-4 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="scrollToPrograms()" class="px-6 py-3 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Explore Programs</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="openAiAdvisorModal()" class="px-6 py-3 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-colors flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-wand-magic-sparkles"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ask AI Advisor&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="openApplyModal()" class="px-6 py-3 bg-white text-orange-600 font-bold rounded-xl hover:bg-orange-50 transition-colors shadow-lg shadow-orange-950/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Apply Now</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer class="bg-[#181B20] text-gray-300 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-10 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4 class="font-bold text-white text-base"&gt;PhD Program&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-400 text-xs italic bg-gray-800/60 p-3.5 rounded-xl border border-gray-700/50 leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Empowering international researchers, scholars, and industry professionals through recognized higher doctoral and executive education tracks.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4 class="font-bold text-white text-base"&gt;Programs&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="space-y-2.5 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="setProgramFilter('phd'); scrollToPrograms()" class="hover:underline text-gray-300 transition-colors"&gt;PhD programs&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="setProgramFilter('dba'); scrollToPrograms()" class="hover:underline text-gray-300 transition-colors"&gt;DBA programs&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="#study-modes-section" class="hover:underline text-gray-300 transition-colors"&gt;Study modes&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4 class="font-bold text-white text-base"&gt;Admissions&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="space-y-2.5 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="openApplyModal()" class="hover:underline text-gray-300 transition-colors"&gt;Eligibility and process&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="openApplyModal()" class="hover:underline text-gray-300 transition-colors"&gt;Apply&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="showSection('tracker')" class="hover:underline text-gray-300 transition-colors"&gt;Track application&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="openAdminModal()" class="hover:underline text-gray-300 transition-colors"&gt;Administrator Access&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4 class="font-bold text-white text-base"&gt;Contact&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="space-y-2 text-xs text-gray-400"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong class="text-gray-300"&gt;Address:&lt;/strong&gt; Global Doctoral Campus, Academic Enclave&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong class="text-gray-300"&gt;Phone:&lt;/strong&gt; +1 (800) 555-DOCTORAL&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong class="text-gray-300"&gt;Email:&lt;/strong&gt; admissions@doctoral-institute.org&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="openAiAdvisorModal()" class="mt-2 text-xs bg-orange-600/30 hover:bg-orange-600/50 text-orange-300 border border-orange-500/40 px-3 py-1.5 rounded-lg flex items-center gap-2 transition-all"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-wand-magic-sparkles text-orange-400"&gt;&lt;/i&gt; Ask AI Counselor</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4 class="font-bold text-white text-base"&gt;Policies&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="space-y-2.5 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="showToast('Adherence to ISO Academic Privacy Regulations', 'info')" class="hover:underline text-gray-300 transition-colors"&gt;Privacy policy&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="showToast('Standard Academic Board Terms Applied', 'info')" class="hover:underline text-gray-300 transition-colors"&gt;Terms and conditions&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="showToast('Scholarship &amp; Stipend terms governed by Academic Senate', 'info')" class="hover:underline text-gray-300 transition-colors"&gt;Fee and refund policy&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="javascript:void(0)" onclick="showToast('Universal Web Content Accessibility Guideline Compliant', 'info')" class="hover:underline text-gray-300 transition-colors"&gt;Accessibility&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto border-t border-gray-800/80 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&amp;copy; 2026 PhD Program. &lt;span class="italic bg-gray-800/70 px-2 py-0.5 rounded text-gray-400"&gt;Global Doctoral Institute Academic Board.&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-gray-500"&gt;Global Doctoral Institute Portal &amp;bull; All Rights Reserved&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="apply-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto border border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="closeApplyModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-600 text-2xl font-bold focus:outline-none" aria-label="Close modal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&amp;times;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="mb-6 space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="text-xs font-bold text-orange-600 uppercase tracking-wider"&gt;Admissions 2026-2027&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="text-2xl font-extrabold text-gray-900" id="wizard-title"&gt;Doctoral Application Form&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-xs text-gray-500"&gt;Step &lt;span id="wiz-step-num"&gt;1&lt;/span&gt; of 3&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex gap-2 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="step-bar-1" class="h-1.5 flex-1 bg-orange-600 rounded-full transition-all"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="step-bar-2" class="h-1.5 flex-1 bg-gray-200 rounded-full transition-all"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="step-bar-3" class="h-1.5 flex-1 bg-gray-200 rounded-full transition-all"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="wiz-error-msg" class="hidden mb-4 p-3.5 bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;i class="fa-solid fa-triangle-exclamation text-sm"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span id="wiz-error-text"&gt;Please fill out all required fields before proceeding.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- NOTE: Standard required attributes on hidden wizard steps were causing native browser submission blocks. Handled reliably via JavaScript validation! --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;form id="apply-form" onsubmit="handleApplySubmit(event)" novalidate class="space-y-4"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Wizard Step 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="wiz-step-1" class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-xs font-bold"&gt;1&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Personal Information &amp; Program Selection &lt;span class="text-xs font-normal text-red-500"&gt;(All fields mandatory)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/h4&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1.5"&gt;Program Track &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-3 gap-3 mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="flex items-center gap-2 p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-orange-50/50 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="radio" name="prog_track" value="PhD" checked onclick="selectTrack('PhD')" class="text-orange-600 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-xs font-bold text-gray-800"&gt;Ph.D. Degree&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="flex items-center gap-2 p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-orange-50/50 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="radio" name="prog_track" value="DBA" onclick="selectTrack('DBA')" class="text-orange-600 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-xs font-bold text-gray-800"&gt;Executive DBA&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="flex items-center gap-2 p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-orange-50/50 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="radio" name="prog_track" value="Online" onclick="selectTrack('Online')" class="text-orange-600 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-xs font-bold text-gray-800"&gt;Online Track&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Target Discipline / Specialization &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="app-program" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500 bg-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="PhD Computer Science &amp; AI"&gt;Ph.D. in Computer Science &amp; Artificial Intelligence (STEM / Fully Funded)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Executive Doctorate of Business Administration"&gt;Executive Doctorate of Business Administration (DBA)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="PhD Global Public Health"&gt;Ph.D. in Global Health Policy &amp; Epidemiology&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="PhD Renewable Energy Systems"&gt;Ph.D. in Renewable Energy Systems &amp; Grid Decarbonization&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="PhD Industrial Engineering"&gt;Ph.D. in Industrial Engineering (Corporate Sponsored Track)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Executive DBA Data-Driven Leadership"&gt;Executive DBA in Data-Driven Leadership&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Full Name (with Title) &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="text" id="app-name" placeholder="e.g. Dr. Sarah Jenkins" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Email Address &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="email" id="app-email" placeholder="applicant@domain.com" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Phone Number (with Country Code) &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="tel" id="app-phone" placeholder="+1 (555) 000-0000" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Wizard Step 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="wiz-step-2" class="space-y-4 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-xs font-bold"&gt;2&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Academic &amp; Professional Background &lt;span class="text-xs font-normal text-red-500"&gt;(All fields mandatory)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/h4&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Highest Degree Earned &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="text" id="app-qual" placeholder="e.g. M.Sc. Data Science / MBA / M.Tech" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Previous Alma Mater / Institution &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="text" id="app-inst" placeholder="e.g. Stanford University" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Years of Work / Research Experience &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="number" id="app-exp" min="0" max="40" placeholder="e.g. 6" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Current Organisation / Employer &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="text" id="app-org" placeholder="e.g. Novartis Research / Tech Corp" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Wizard Step 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="wiz-step-3" class="space-y-4 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4 class="font-bold text-gray-900 border-b pb-2 text-sm flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-xs font-bold"&gt;3&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Research Statement &amp; Candidate Declaration &lt;span class="text-xs font-normal text-red-500"&gt;(Mandatory)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/h4&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Proposed Research Topic / Abstract &lt;span class="text-red-500"&gt;*&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;textarea id="app-proposal" rows="4" placeholder="State your proposed research title, problem statement, key methodology, and intended contribution to academic literature..." class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-gray-50 border border-gray-200 p-4 rounded-xl space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-start gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="checkbox" id="app-declaration" class="mt-1 h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label for="app-declaration" class="text-xs text-gray-700 font-medium leading-relaxed cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>I hereby certify that all information submitted in this application is accurate and authored by me. I agree to comply with the research ethics policies of the Global Doctoral Institute.</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Wizard Navigation Controls --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center justify-between pt-4 border-t border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" id="wiz-prev-btn" onclick="wizPrev()" class="hidden px-5 py-2.5 text-xs font-semibold text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-arrow-left me-1"&gt;&lt;/i&gt; Back</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">          </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ml-auto flex gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="button" id="wiz-next-btn" onclick="wizNext()" class="px-6 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl text-xs shadow-md transition-colors flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Next Step &lt;i class="fa-solid fa-arrow-right text-[10px]"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="submit" id="wiz-submit-btn" class="hidden px-7 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow-md transition-colors flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Submit Application &lt;i class="fa-solid fa-paper-plane text-[10px]"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="admin-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="closeAdminModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-600 text-xl font-bold focus:outline-none"&gt;&amp;times;&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="admin-login-view" class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="w-11 h-11 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-lg mb-2 shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-shield-halved"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-xl font-bold text-gray-900"&gt;Admin Control Portal&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-xs text-gray-500"&gt;Authorized admission committee members only.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Quick Credentials helper badge for testing --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-orange-50 border border-orange-200 p-3 rounded-xl flex items-center justify-between text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="font-bold text-orange-950"&gt;Default Credentials&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-[11px] text-orange-800 font-mono"&gt;admin@2000 / KA18SDA370502&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" onclick="fillAdminCredentials()" class="px-2.5 py-1 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg text-[10px] shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Auto-fill</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form onsubmit="handleAdminLogin(event)" class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Admin ID&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="admin-id" placeholder="admin@2000" required class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label class="block text-xs font-semibold text-gray-700 mb-1"&gt;Password&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="password" id="admin-pass" placeholder="••••••••••••" required class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p id="admin-err" class="text-xs text-red-600 hidden font-semibold flex items-center gap-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-circle-exclamation"&gt;&lt;/i&gt; Invalid credentials. Check your Admin ID or Password.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="submit" class="w-full py-3 bg-gray-900 hover:bg-black text-white font-bold rounded-xl text-sm transition-all shadow-md active:scale-98"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Authenticate &amp; Open Dashboard</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="dossier-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[85vh] overflow-y-auto border border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="closeDossierModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-600 text-2xl font-bold"&gt;&amp;times;&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="dossier-content" class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Rendered by openDossierModal() --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="ai-advisor-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="bg-[#1E232A] text-white rounded-3xl max-w-xl w-full p-6 shadow-2xl relative border border-gray-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="closeAiAdvisorModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold focus:outline-none"&gt;&amp;times;&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center gap-3 mb-4 border-b border-gray-700 pb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-10 h-10 rounded-xl bg-orange-600 text-white flex items-center justify-center font-bold text-lg shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-brain"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="font-bold text-lg text-white"&gt;Gemini Academic AI Counselor&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-xs text-orange-400"&gt;Instant doctoral advisory on admissions, supervisors, and funding&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="ai-chat-box" class="bg-[#14171C] rounded-2xl p-4 h-64 overflow-y-auto space-y-3 mb-4 text-xs leading-relaxed border border-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-gray-800/80 text-gray-200 p-3.5 rounded-2xl max-w-[85%] border border-gray-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>👋 Hello! I am your AI Academic Advisor for the Global Doctoral Institute. Ask me anything regarding Ph.D. requirements, Executive DBA eligibility, writing competitive research proposals, or matching supervisors!</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="ai-query-input" placeholder="e.g. Can I pursue a DBA while working full-time in healthcare?" onkeydown="if(event.key==='Enter') sendAiQuery()" class="flex-1 bg-[#282E38] text-white placeholder-gray-500 text-xs px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="sendAiQuery()" id="ai-send-btn" class="px-5 py-3 bg-orange-600 hover:bg-orange-500 text-white font-semibold rounded-xl text-xs flex items-center gap-2 transition-all shadow-md active:scale-95"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ask AI&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-paper-plane text-[10px]"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let applications = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>id: "GDI-8X92K4",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>name: "Dr. Sarah Jenkins",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>email: "s.jenkins@stanford-alumni.org",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>phone: "+1 (555) 234-8890",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>program: "PhD Computer Science &amp; AI",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>status: "Interview Shortlisted",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>date: "2026-10-12",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>qual: "M.Sc. Artificial Intelligence",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>inst: "Carnegie Mellon University",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>exp: "7",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>org: "DeepHealth Robotics",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>proposal: "Neural Attention Architectures for Early Detection of Neurodegenerative Biomarkers in Longitudinal Cohort Studies."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>id: "GDI-3M19A7",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>name: "Marcus Vance",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>email: "m.vance@vancepartners.co",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>phone: "+1 (555) 871-3341",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>program: "Executive Doctorate of Business Administration",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>status: "Under Review",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>date: "2026-10-11",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>qual: "MBA Finance &amp; Strategy",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>inst: "INSEAD",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>exp: "14",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>org: "Vance Global Strategy Group",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>proposal: "Corporate Governance Dynamics and Capital Allocation Resilience in Multi-Tiered Supply Chain Disruptions."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>id: "GDI-7F45P2",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>name: "Elena Rostova",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>email: "e.rostova@eco-tech.eu",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>phone: "+44 20 7946 0912",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>program: "PhD Renewable Energy Systems",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>status: "Offer Issued",<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>date: "2026-10-09",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>qual: "M.Sc. Applied Thermodynamics",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>inst: "Technical University of Munich",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>exp: "5",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>org: "Helios Clean Power",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>proposal: "High-Efficiency Perovskite Tandem Solar Cells for Megawatt-Scale Desalination Facilities."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const samplePrograms = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ title: "Ph.D. in Computer Science &amp; Artificial Intelligence", type: "phd", badge: "STEM Certified", topRank: true, desc: "Rigorous focus on neural architectures, machine learning theory, ethical AI protocols, and large scale distributed computing." },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ title: "Executive Doctorate of Business Administration (DBA)", type: "dba", badge: "Most Popular", topRank: false, desc: "Designed for senior executives seeking to solve complex managerial challenges through empirical research and corporate governance frameworks." },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ title: "Ph.D. in Global Health Policy &amp; Epidemiology", type: "phd", badge: "Fully Funded", topRank: false, desc: "Addressing international healthcare infrastructure, infectious disease modeling, healthcare equity, and epidemiological statistics." },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ title: "Ph.D. in Renewable Energy Systems", type: "phd", badge: "Sponsored Track", topRank: true, desc: "Advanced empirical research in photovoltaic materials, grid integration, storage kinetics, and clean hydrogen transition." },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ title: "Executive DBA in Data-Driven Leadership", type: "dba", badge: "Hybrid Track", topRank: false, desc: "Synthesizing executive business intelligence, quantitative decision algorithms, behavioral economics, and strategic organizational design." },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ title: "Ph.D. in Industrial &amp; Systems Engineering", type: "phd", badge: "Industry Partnered", topRank: false, desc: "Focusing on cyber-physical automation, supply chain digital twins, and additive manufacturing optimization." }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentWizStep = 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let activeFilter = 'all';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let isAdminLoggedIn = false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showToast(message, type = 'info') {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const container = document.getElementById('toast-container');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!container) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const toast = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const bgColors = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>success: 'bg-emerald-600 text-white',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>error: 'bg-red-600 text-white',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>info: 'bg-gray-900 text-white'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const icons = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>success: 'fa-circle-check',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>error: 'fa-circle-exclamation',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>info: 'fa-circle-info'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>toast.className = `${bgColors[type] || bgColors.info} p-3.5 rounded-xl text-xs font-semibold shadow-xl flex items-center gap-2 pointer-events-auto transform transition-all duration-300 translate-y-2 opacity-0`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>toast.innerHTML = `&lt;i class="fa-solid ${icons[type] || icons.info}"&gt;&lt;/i&gt; &lt;span&gt;${message}&lt;/span&gt;`;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>container.appendChild(toast);</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>toast.classList.remove('translate-y-2', 'opacity-0');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}, 10);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>toast.classList.add('opacity-0', 'translate-y-2');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; toast.remove(), 300);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}, 4000);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function generateRefID() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let result = 'GDI-';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; 6; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>result += chars.charAt(Math.floor(Math.random() * chars.length));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return result;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showSection(sectionId) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const home = document.getElementById('sec-home');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tracker = document.getElementById('sec-tracker');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const admin = document.getElementById('sec-admin-panel');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (home) home.classList.toggle('hidden', sectionId !== 'home');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (tracker) tracker.classList.toggle('hidden', sectionId !== 'tracker');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (admin) admin.classList.toggle('hidden', sectionId !== 'admin');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Update Nav active indicator</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const homeBtn = document.getElementById('nav-btn-home');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const trackBtn = document.getElementById('nav-btn-tracker');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (homeBtn) homeBtn.className = sectionId === 'home' ? 'px-3 py-2 text-sm font-semibold text-orange-600 transition-colors' : 'px-3 py-2 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-colors';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (trackBtn) trackBtn.className = sectionId === 'tracker' ? 'px-3 py-2 text-sm font-semibold text-orange-600 transition-colors' : 'px-3 py-2 text-sm font-semibold text-gray-700 hover:text-orange-600 transition-colors';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.scrollTo({ top: 0, behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function scrollToPrograms() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showSection('home');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const progSection = document.getElementById('programs-directory');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (progSection) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>progSection.scrollIntoView({ behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function toggleMobileMenu() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const menu = document.getElementById('mobile-menu');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (menu) menu.classList.toggle('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function selectTrack(track) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const progSelect = document.getElementById('app-program');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!progSelect) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (track === 'DBA') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>progSelect.value = "Executive Doctorate of Business Administration";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (track === 'Online') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>progSelect.value = "Executive DBA Data-Driven Leadership";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>progSelect.value = "PhD Computer Science &amp; AI";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function setProgramFilter(filter) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>activeFilter = filter;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.prog-filter-btn').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.classList.remove('bg-orange-600', 'text-white', 'shadow-xs');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.classList.add('bg-gray-100', 'text-gray-600');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const activeBtn = document.getElementById(`filter-${filter}`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (activeBtn) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>activeBtn.classList.remove('bg-gray-100', 'text-gray-600');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>activeBtn.classList.add('bg-orange-600', 'text-white', 'shadow-xs');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>filterPrograms();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function filterPrograms() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const searchInput = document.getElementById('prog-search');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const query = searchInput ? searchInput.value.toLowerCase().trim() : '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const filtered = samplePrograms.filter(prog =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const matchesFilter = activeFilter === 'all' || prog.type === activeFilter;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const matchesSearch = prog.title.toLowerCase().includes(query) ||<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                              </span>prog.desc.toLowerCase().includes(query) ||<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                              </span>prog.badge.toLowerCase().includes(query);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return matchesFilter &amp;&amp; matchesSearch;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderPrograms(filtered);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderPrograms(programsList) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const grid = document.getElementById('program-cards-grid');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!grid) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (programsList.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-span-full bg-white p-10 rounded-2xl border border-gray-200 text-center text-gray-500 space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-folder-open text-4xl text-gray-300"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-sm font-semibold"&gt;No doctoral programs found matching your query.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-400"&gt;Try adjusting your search terms or clearing the filter.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid.innerHTML = programsList.map(p =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white rounded-2xl border border-gray-200/80 p-6 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-5 hover:border-orange-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="text-[10px] uppercase font-extrabold tracking-wider px-2.5 py-1 rounded-md bg-orange-50 text-orange-600 border border-orange-200/60"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>${p.badge}</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${p.topRank ? '&lt;span class="text-xs text-amber-500 font-semibold flex items-center gap-1"&gt;&lt;i class="fa-solid fa-star"&gt;&lt;/i&gt; Featured&lt;/span&gt;' : ''}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="font-bold text-gray-900 text-lg leading-snug"&gt;${p.title}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-600 text-xs leading-relaxed"&gt;${p.desc}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="pt-4 border-t border-gray-100 flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="prefillAndOpenApply('${p.title}')" class="text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center gap-1.5 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;Apply Now&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-chevron-right text-[10px]"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="openAiAdvisorForTopic('${p.title}')" class="text-xs text-gray-500 hover:text-gray-800 flex items-center gap-1.5 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-wand-magic-sparkles text-orange-500"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;AI Info&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function prefillAndOpenApply(programTitle) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>openApplyModal();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const progSelect = document.getElementById('app-program');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (progSelect) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (let i = 0; i &lt; progSelect.options.length; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (programTitle.toLowerCase().includes(progSelect.options[i].text.toLowerCase().substring(0, 15))) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>progSelect.selectedIndex = i;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openApplyModal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentWizStep = 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateWizUI();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const errBox = document.getElementById('wiz-error-msg');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (errBox) errBox.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const modal = document.getElementById('apply-modal');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (modal) modal.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function closeApplyModal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const modal = document.getElementById('apply-modal');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (modal) modal.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function validateStep(step) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const errBox = document.getElementById('wiz-error-msg');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const errText = document.getElementById('wiz-error-text');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (errBox) errBox.classList.add('hidden');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (step === 1) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const name = document.getElementById('app-name').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const email = document.getElementById('app-email').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const phone = document.getElementById('app-phone').value.trim();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!name || !email || !phone) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (errBox) errBox.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (errText) errText.textContent = 'Please provide your Full Name, Email, and Phone Number before continuing to Step 2.';</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!emailRegex.test(email)) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (errBox) errBox.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (errText) errText.textContent = 'Please enter a valid academic or professional email address.';</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (step === 2) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const qual = document.getElementById('app-qual').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const inst = document.getElementById('app-inst').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const exp = document.getElementById('app-exp').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const org = document.getElementById('app-org').value.trim();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!qual || !inst || !exp || !org) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (errBox) errBox.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (errText) errText.textContent = 'All academic background fields (Highest Degree, Institution, Years of Experience, Current Organisation) are required.';</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return true;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function wizNext() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!validateStep(currentWizStep)) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (currentWizStep &lt; 3) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>currentWizStep++;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateWizUI();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function wizPrev() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const errBox = document.getElementById('wiz-error-msg');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (errBox) errBox.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (currentWizStep &gt; 1) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>currentWizStep--;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateWizUI();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateWizUI() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const stepNum = document.getElementById('wiz-step-num');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (stepNum) stepNum.textContent = currentWizStep;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('wiz-step-1').classList.toggle('hidden', currentWizStep !== 1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('wiz-step-2').classList.toggle('hidden', currentWizStep !== 2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('wiz-step-3').classList.toggle('hidden', currentWizStep !== 3);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('step-bar-1').className = `h-1.5 flex-1 rounded-full transition-all ${currentWizStep &gt;= 1 ? 'bg-orange-600' : 'bg-gray-200'}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('step-bar-2').className = `h-1.5 flex-1 rounded-full transition-all ${currentWizStep &gt;= 2 ? 'bg-orange-600' : 'bg-gray-200'}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('step-bar-3').className = `h-1.5 flex-1 rounded-full transition-all ${currentWizStep &gt;= 3 ? 'bg-orange-600' : 'bg-gray-200'}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('wiz-prev-btn').classList.toggle('hidden', currentWizStep === 1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('wiz-next-btn').classList.toggle('hidden', currentWizStep === 3);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('wiz-submit-btn').classList.toggle('hidden', currentWizStep !== 3);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function handleApplySubmit(e) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (e) e.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Final step verification</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const proposal = document.getElementById('app-proposal').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const decl = document.getElementById('app-declaration').checked;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const errBox = document.getElementById('wiz-error-msg');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const errText = document.getElementById('wiz-error-text');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!proposal) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (errBox) errBox.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (errText) errText.textContent = 'Please enter your proposed research topic abstract or problem statement.';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!decl) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (errBox) errBox.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (errText) errText.textContent = 'You must confirm the ethics declaration checkbox before submitting your application.';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const newRef = generateRefID();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const name = document.getElementById('app-name').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const email = document.getElementById('app-email').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const phone = document.getElementById('app-phone').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const prog = document.getElementById('app-program').value;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const qual = document.getElementById('app-qual').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const inst = document.getElementById('app-inst').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const exp = document.getElementById('app-exp').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const org = document.getElementById('app-org').value.trim();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const newApp = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>id: newRef,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>name: name,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>email: email,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>phone: phone,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>program: prog,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>status: "Application Submitted",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>date: new Date().toISOString().split('T')[0],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>qual: qual,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>inst: inst,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>exp: exp,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>org: org,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>proposal: proposal</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Add to beginning of records</p>
+<p class="p1"><span class="Apple-converted-space">      </span>applications.unshift(newApp);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Reset form</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('apply-form').reset();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentWizStep = 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateWizUI();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>closeApplyModal();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Refresh admin table and stats if open</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateAdminStats();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (isAdminLoggedIn) renderAdminDashboard();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>showToast(`Application successfully registered! Ref ID: ${newRef}`, 'success');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Navigate to Tracker</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showSection('tracker');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const trackInput = document.getElementById('track-id-input');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (trackInput) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>trackInput.value = newRef;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>trackApplication();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function quickTrack(id) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const input = document.getElementById('track-id-input');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (input) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input.value = id;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>trackApplication();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function trackApplication() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const input = document.getElementById('track-id-input');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const id = input ? input.value.trim().toUpperCase() : '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const resContainer = document.getElementById('track-result');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!resContainer) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>resContainer.classList.remove('hidden');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!id) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resContainer.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="p-4 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-xs flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-circle-exclamation text-base text-amber-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Please enter your Reference ID to inspect status.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const found = applications.find(a =&gt; a.id.toUpperCase() === id);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!found) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resContainer.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="p-5 bg-red-50 border border-red-200 rounded-2xl text-red-700 text-xs space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="font-bold flex items-center gap-1.5 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-triangle-exclamation"&gt;&lt;/i&gt; Reference ID Not Found</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;We could not find an application matching "${id}". Please verify the code or submit a new proposal.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Progression Steps determination</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const statusMap = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Application Submitted": 1,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Under Review": 2,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Interview Shortlisted": 3,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Offer Issued": 4,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Rejected": 0</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const stageNumber = statusMap[found.status] !== undefined ? statusMap[found.status] : 1;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>resContainer.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-gray-50/80 p-6 sm:p-8 rounded-2xl border border-gray-200/80 space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 border-b border-gray-200 pb-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-xs font-mono font-black text-orange-600 bg-orange-100 px-2.5 py-0.5 rounded"&gt;${found.id}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-xs text-gray-400"&gt;Registered: ${found.date}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="text-xl font-extrabold text-gray-900 mt-1"&gt;${found.name}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-xs text-gray-600 font-medium"&gt;${found.program}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="px-4 py-2 font-bold text-xs rounded-full inline-flex items-center gap-1.5 shadow-xs ${</p>
+<p class="p1"><span class="Apple-converted-space">                </span>found.status === 'Offer Issued' ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' :</p>
+<p class="p1"><span class="Apple-converted-space">                </span>found.status === 'Interview Shortlisted' ? 'bg-indigo-100 text-indigo-800 border border-indigo-300' :</p>
+<p class="p1"><span class="Apple-converted-space">                </span>found.status === 'Rejected' ? 'bg-red-100 text-red-800 border border-red-300' :</p>
+<p class="p1"><span class="Apple-converted-space">                </span>'bg-orange-100 text-orange-800 border border-orange-300'</p>
+<p class="p1"><span class="Apple-converted-space">              </span>}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-circle text-[8px]"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>${found.status}</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Visual 4-Step Progress Line --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-4"&gt;Admissions Progression Status&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="p-3 rounded-xl border ${stageNumber &gt;= 1 ? 'bg-orange-50 border-orange-300 text-orange-800' : 'bg-white border-gray-200 text-gray-400'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="w-6 h-6 rounded-full mx-auto mb-1 flex items-center justify-center text-xs font-bold ${stageNumber &gt;= 1 ? 'bg-orange-600 text-white' : 'bg-gray-200 text-gray-600'}"&gt;1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[11px] font-bold"&gt;Application&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[10px] text-gray-500"&gt;Form Received&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="p-3 rounded-xl border ${stageNumber &gt;= 2 ? 'bg-orange-50 border-orange-300 text-orange-800' : 'bg-white border-gray-200 text-gray-400'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="w-6 h-6 rounded-full mx-auto mb-1 flex items-center justify-center text-xs font-bold ${stageNumber &gt;= 2 ? 'bg-orange-600 text-white' : 'bg-gray-200 text-gray-600'}"&gt;2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[11px] font-bold"&gt;Shortlisting&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[10px] text-gray-500"&gt;Faculty Review&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="p-3 rounded-xl border ${stageNumber &gt;= 3 ? 'bg-orange-50 border-orange-300 text-orange-800' : 'bg-white border-gray-200 text-gray-400'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="w-6 h-6 rounded-full mx-auto mb-1 flex items-center justify-center text-xs font-bold ${stageNumber &gt;= 3 ? 'bg-orange-600 text-white' : 'bg-gray-200 text-gray-600'}"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[11px] font-bold"&gt;Interview&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[10px] text-gray-500"&gt;Expert Panel&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="p-3 rounded-xl border ${stageNumber &gt;= 4 ? 'bg-emerald-50 border-emerald-300 text-emerald-800' : 'bg-white border-gray-200 text-gray-400'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="w-6 h-6 rounded-full mx-auto mb-1 flex items-center justify-center text-xs font-bold ${stageNumber &gt;= 4 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-600'}"&gt;4&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[11px] font-bold"&gt;Selection&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-[10px] text-gray-500"&gt;Offer Granted&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Academic Dossier Summary --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-white p-4 rounded-xl border border-gray-200 space-y-2 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h5 class="font-bold text-gray-800 uppercase tracking-wider text-[11px]"&gt;Submitted Research Summary&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-600 italic"&gt;"${found.proposal || 'No abstract statement recorded.'}"&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pt-2 text-gray-500 flex flex-wrap gap-4 text-[11px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;&lt;strong&gt;Prior Degree:&lt;/strong&gt; ${found.qual || 'N/A'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;&lt;strong&gt;Alma Mater:&lt;/strong&gt; ${found.inst || 'N/A'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;&lt;strong&gt;Organisation:&lt;/strong&gt; ${found.org || 'N/A'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openAdminModal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (isAdminLoggedIn) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showSection('admin');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderAdminDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const modal = document.getElementById('admin-modal');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const err = document.getElementById('admin-err');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (err) err.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (modal) modal.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function closeAdminModal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const modal = document.getElementById('admin-modal');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (modal) modal.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function fillAdminCredentials() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('admin-id').value = 'admin@2000';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('admin-pass').value = 'KA18SDA370502';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function handleAdminLogin(e) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const id = document.getElementById('admin-id').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pass = document.getElementById('admin-pass').value.trim();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (id === 'admin@2000' &amp;&amp; pass === 'KA18SDA370502') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>isAdminLoggedIn = true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('admin-err').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>closeAdminModal();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Update nav badge</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const navLabel = document.getElementById('nav-admin-label');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (navLabel) navLabel.innerHTML = `Admin &lt;span class="bg-emerald-500 text-white text-[9px] px-1.5 py-0.2 rounded font-mono"&gt;ACTIVE&lt;/span&gt;`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast('Admin access authorized. Welcome to the Control Center.', 'success');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showSection('admin');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderAdminDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('admin-err').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function handleAdminLogout() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>isAdminLoggedIn = false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const navLabel = document.getElementById('nav-admin-label');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (navLabel) navLabel.textContent = 'Admin Portal';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showToast('Logged out of Admin Session.', 'info');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showSection('home');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateAdminStats() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const total = applications.length;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pending = applications.filter(a =&gt; a.status === 'Under Review' || a.status === 'Application Submitted').length;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const interview = applications.filter(a =&gt; a.status === 'Interview Shortlisted').length;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const accepted = applications.filter(a =&gt; a.status === 'Offer Issued').length;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tElem = document.getElementById('stat-total-apps');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pElem = document.getElementById('stat-pending-apps');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const iElem = document.getElementById('stat-interview-apps');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const aElem = document.getElementById('stat-accepted-apps');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (tElem) tElem.textContent = total;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (pElem) pElem.textContent = pending;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (iElem) iElem.textContent = interview;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (aElem) aElem.textContent = accepted;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderAdminDashboard() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateAdminStats();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tbody = document.getElementById('admin-table-body');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const emptyMsg = document.getElementById('admin-table-empty');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const searchVal = document.getElementById('admin-search')?.value.toLowerCase().trim() || '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const filterVal = document.getElementById('admin-status-filter')?.value || 'ALL';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!tbody) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const filtered = applications.filter(app =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const matchesSearch = app.name.toLowerCase().includes(searchVal) ||</p>
+<p class="p1"><span class="Apple-converted-space">                              </span>app.id.toLowerCase().includes(searchVal) ||</p>
+<p class="p1"><span class="Apple-converted-space">                              </span>app.program.toLowerCase().includes(searchVal);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const matchesStatus = filterVal === 'ALL' || app.status === filterVal;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return matchesSearch &amp;&amp; matchesStatus;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (filtered.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tbody.innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (emptyMsg) emptyMsg.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (emptyMsg) emptyMsg.classList.add('hidden');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>tbody.innerHTML = filtered.map(app =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr class="hover:bg-gray-50/80 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;td class="px-6 py-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="font-mono font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200"&gt;${app.id}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;td class="px-6 py-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="font-bold text-gray-900"&gt;${app.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-[11px] text-gray-500"&gt;${app.email || 'N/A'} &amp;bull; ${app.phone || 'N/A'}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;td class="px-6 py-4 text-gray-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${app.program}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;td class="px-6 py-4 text-gray-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${app.date}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;td class="px-6 py-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select onchange="updateApplicationStatus('${app.id}', this.value)" class="text-xs font-semibold rounded-lg px-2.5 py-1.5 border border-gray-300 bg-white focus:ring-2 focus:ring-orange-500 focus:outline-none ${</p>
+<p class="p1"><span class="Apple-converted-space">              </span>app.status === 'Offer Issued' ? 'text-emerald-700 bg-emerald-50 border-emerald-300' :</p>
+<p class="p1"><span class="Apple-converted-space">              </span>app.status === 'Interview Shortlisted' ? 'text-indigo-700 bg-indigo-50 border-indigo-300' :</p>
+<p class="p1"><span class="Apple-converted-space">              </span>app.status === 'Rejected' ? 'text-red-700 bg-red-50 border-red-300' :</p>
+<p class="p1"><span class="Apple-converted-space">              </span>'text-orange-700 bg-orange-50 border-orange-300'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Application Submitted" ${app.status === 'Application Submitted' ? 'selected' : ''}&gt;Application Submitted&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Under Review" ${app.status === 'Under Review' ? 'selected' : ''}&gt;Under Review&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Interview Shortlisted" ${app.status === 'Interview Shortlisted' ? 'selected' : ''}&gt;Interview Shortlisted&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Offer Issued" ${app.status === 'Offer Issued' ? 'selected' : ''}&gt;Offer Issued&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;option value="Rejected" ${app.status === 'Rejected' ? 'selected' : ''}&gt;Rejected&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;td class="px-6 py-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center justify-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button onclick="openDossierModal('${app.id}')" class="p-1.5 text-gray-500 hover:text-orange-600 bg-gray-100 hover:bg-orange-50 rounded-lg transition-colors" title="View Full Dossier"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-file-lines text-sm"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button onclick="deleteApplication('${app.id}')" class="p-1.5 text-gray-400 hover:text-red-600 bg-gray-100 hover:bg-red-50 rounded-lg transition-colors" title="Remove Application"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-trash-can text-sm"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateApplicationStatus(id, newStatus) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const app = applications.find(a =&gt; a.id === id);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (app) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>app.status = newStatus;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateAdminStats();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast(`Status for ${id} updated to "${newStatus}"`, 'success');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function deleteApplication(id) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const idx = applications.findIndex(a =&gt; a.id === id);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (idx !== -1) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const removed = applications.splice(idx, 1)[0];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderAdminDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast(`Dossier ${removed.id} archived from current registry.`, 'info');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openDossierModal(appId) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const app = applications.find(a =&gt; a.id === appId);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!app) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const content = document.getElementById('dossier-content');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="flex items-start justify-between border-b pb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="text-xs font-mono font-bold text-orange-600 bg-orange-100 px-2.5 py-0.5 rounded"&gt;${app.id}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="text-xl font-bold text-gray-900 mt-1"&gt;${app.name}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-xs text-gray-500"&gt;${app.program}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-semibold px-2.5 py-1 bg-gray-100 text-gray-700 rounded-md"&gt;Status: ${app.status}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="grid grid-cols-2 gap-3 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="p-3 bg-gray-50 rounded-xl border border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="text-gray-400 block font-medium"&gt;Email&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="font-bold text-gray-800"&gt;${app.email || 'N/A'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="p-3 bg-gray-50 rounded-xl border border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="text-gray-400 block font-medium"&gt;Phone&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="font-bold text-gray-800"&gt;${app.phone || 'N/A'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="p-3 bg-gray-50 rounded-xl border border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="text-gray-400 block font-medium"&gt;Prior Degree &amp; Alma Mater&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="font-bold text-gray-800"&gt;${app.qual || 'N/A'} &amp;bull; ${app.inst || 'N/A'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="p-3 bg-gray-50 rounded-xl border border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="text-gray-400 block font-medium"&gt;Experience &amp; Organisation&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="font-bold text-gray-800"&gt;${app.exp || '0'} Years &amp;bull; ${app.org || 'N/A'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-100 space-y-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h5 class="text-xs font-bold text-orange-950 uppercase tracking-wider"&gt;Research Proposal Synopsis&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-700 leading-relaxed"&gt;${app.proposal || 'No research proposal attached.'}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="pt-2 flex justify-end"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="closeDossierModal()" class="px-5 py-2 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-xl transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Close Dossier</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('dossier-modal').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function closeDossierModal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('dossier-modal').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function exportApplicationsToCSV() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (applications.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast('No applications available to export.', 'info');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const headers = ['RefID', 'Name', 'Email', 'Phone', 'Program', 'Status', 'Date', 'PriorDegree', 'Institution', 'ExperienceYears', 'Organisation'];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const rows = applications.map(a =&gt; [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.id}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.name}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.email || ''}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.phone || ''}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.program}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.status}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.date}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.qual || ''}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.inst || ''}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.exp || ''}"`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`"${a.org || ''}"`</p>
+<p class="p1"><span class="Apple-converted-space">      </span>]);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map(e =&gt; e.join(','))].join('\n');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const encodedUri = encodeURI(csvContent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const link = document.createElement('a');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>link.setAttribute('href', encodedUri);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>link.setAttribute('download', `GDI_Doctoral_Applications_${new Date().toISOString().split('T')[0]}.csv`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.body.appendChild(link);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>link.click();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.body.removeChild(link);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>showToast('Exported CSV file successfully.', 'success');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openAiAdvisorModal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('ai-advisor-modal').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function closeAiAdvisorModal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('ai-advisor-modal').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openAiAdvisorForTopic(topicTitle) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>openAiAdvisorModal();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const input = document.getElementById('ai-query-input');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (input) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input.value = `Tell me about admissions, prerequisites, and thesis requirements for ${topicTitle}.`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sendAiQuery();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function sendAiQuery() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const input = document.getElementById('ai-query-input');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const chatBox = document.getElementById('ai-chat-box');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const sendBtn = document.getElementById('ai-send-btn');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const userText = input.value.trim();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!userText) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>chatBox.innerHTML += `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex justify-end"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-orange-600 text-white p-3 rounded-2xl max-w-[85%] shadow-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${userText}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>input.value = '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>chatBox.scrollTop = chatBox.scrollHeight;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const loadingId = 'ai-loading-' + Date.now();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>chatBox.innerHTML += `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="${loadingId}" class="bg-gray-800/80 text-orange-400 p-3 rounded-2xl max-w-[85%] border border-gray-700 flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fa-solid fa-circle-notch animate-spin"&gt;&lt;/i&gt; Gemini is analyzing academic guidance...</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>chatBox.scrollTop = chatBox.scrollHeight;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>sendBtn.disabled = true;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const apiKey = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const systemPrompt = "You are a distinguished Senior Academic Advisor and Dean of Admissions at the Global Doctoral Institute. Provide concise, expert, and encouraging doctoral guidance (2-4 sentences max) covering PhD prerequisites, Executive DBA admissions criteria, research proposal formulation, publication ethics, supervisor matching, and scholarship options.";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const payload = {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>contents: [{ parts: [{ text: userText }] }],</p>
+<p class="p1"><span class="Apple-converted-space">          </span>systemInstruction: { parts: [{ text: systemPrompt }] }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const response = await fetch(apiUrl, {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>body: JSON.stringify(payload)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const data = await response.json();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const aiAnswer = data.candidates?.[0]?.content?.parts?.[0]?.text;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const loadingElem = document.getElementById(loadingId);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (loadingElem) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (aiAnswer) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>loadingElem.className = "bg-gray-800/80 text-gray-200 p-3.5 rounded-2xl max-w-[85%] border border-gray-700";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>loadingElem.innerHTML = `🎓 ${aiAnswer}`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>throw new Error("No response candidate");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} catch (err) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const loadingElem = document.getElementById(loadingId);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (loadingElem) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>loadingElem.className = "bg-orange-950/80 text-orange-200 p-3.5 rounded-2xl max-w-[85%] border border-orange-800/60 space-y-1";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>loadingElem.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="font-bold flex items-center gap-1.5 text-orange-400"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;i class="fa-solid fa-graduation-cap"&gt;&lt;/i&gt; Doctoral Academic Guidance</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;Applicants holding a recognized Master's degree (or equivalent executive tenure of 5+ years) are eligible for direct committee evaluation. Ensure your research proposal outlines a clear methodology, literature gap, and real-world impact. You can submit your proposal directly through our 3-Step Wizard or email &lt;span class="underline"&gt;admissions@doctoral-institute.org&lt;/span&gt;.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} finally {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sendBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>chatBox.scrollTop = chatBox.scrollHeight;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>filterPrograms();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateAdminStats();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
